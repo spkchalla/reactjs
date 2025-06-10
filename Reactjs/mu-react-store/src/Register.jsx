@@ -1,11 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link , useNavigate} from "react-router-dom";
+import { useState, useContext } from "react";
+import { AppContext } from "./App";
 export default function Register() {
-  const [user, setUser] = useState({});
+
+  const {users, setUsers} = useContext(AppContext)
+  
+
   const [count, setCount] = useState(0);
   const [new_count, setNew_Count]= useState(0);
-
+  const [user, setUser] = useState({});
+  const Navigate = useNavigate();
 
   const handleClick = () => {
     alert("Hello World");
@@ -19,8 +24,11 @@ export default function Register() {
   const play2 = ()=>{
     setNew_Count(new_count-1);
   };
-  const display = ()=>{
-    console.log(user);
+  const handleSubmit = ()=>{
+    // console.log(user);
+    setUsers([...users, user]);
+    Navigate("/login");
+    console.log(users);
   }
   
   return (
@@ -48,7 +56,7 @@ export default function Register() {
         />
       </p>
       <p>
-        <button onClick={display}>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </p>
       <hr />
       <p>
