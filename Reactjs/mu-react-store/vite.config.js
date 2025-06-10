@@ -23,12 +23,12 @@ export default defineConfig({
           {
             src: "/images.jpeg",
             sizes: "512x512",
-            type: "image/png",
+            type: "image/jpeg",
           },
           {
             src: "/images.jpeg",
             sizes: "512x512",
-            type: "image/png",
+            type: "image/jpeg",
             purpose: "any maskable",
           },
         ],
