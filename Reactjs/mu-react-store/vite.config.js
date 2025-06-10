@@ -16,17 +16,17 @@ export default defineConfig({
         theme_color: "#ffffff",
         icons: [
           {
-            src: "/icons/sun-192x192.png",
+            src: "/icons/images (1).jpeg",
             sizes: "192x192",
-            type: "image/png",
+            type: "image/jpeg",
           },
           {
-            src: "/images.jpeg",
+            src: "/icons/images.jpeg",
             sizes: "512x512",
             type: "image/jpeg",
           },
           {
-            src: "/images.jpeg",
+            src: "/icons/images.jpeg",
             sizes: "512x512",
             type: "image/jpeg",
             purpose: "any maskable",
