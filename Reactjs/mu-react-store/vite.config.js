@@ -10,7 +10,7 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "robots.txt", "apple-touch-icon.png"],
       manifest: {
-        name: "Learning Management",
+        name: "App by SPK",
         short_name: "SPKUMAR",
         description: "Full Stack Learning Management",
         theme_color: "#ffffff",
@@ -21,12 +21,12 @@ export default defineConfig({
             type: "image/png",
           },
           {
-            src: "/icons/sun-512x512.png",
+            src: "/images.jpeg",
             sizes: "512x512",
             type: "image/png",
           },
           {
-            src: "/icons/sun-512x512.png",
+            src: "/images.jpeg",
             sizes: "512x512",
             type: "image/png",
             purpose: "any maskable",
