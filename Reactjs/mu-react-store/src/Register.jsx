@@ -19,6 +19,9 @@ export default function Register() {
   const play2 = ()=>{
     setNew_Count(new_count-1);
   };
+  const display = ()=>{
+    console.log(user);
+  }
   
   return (
     <div>
@@ -45,7 +48,7 @@ export default function Register() {
         />
       </p>
       <p>
-        <button>Submit</button>
+        <button onClick={display}>Submit</button>
       </p>
       <hr />
       <p>
