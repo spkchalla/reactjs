@@ -14,7 +14,7 @@ export default function Product() {
     return (
         <div>
             {products.map(product=>(
-                <li>{product.name}</li>
+                <li>{product.name}, {product.desc}</li>
             ))}
         </div>
     );
