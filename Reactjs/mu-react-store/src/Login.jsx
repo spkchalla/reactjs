@@ -12,6 +12,7 @@ export default function Login() {
     const url = "http://localhost:8080/login";
     const res = await axios.post(url, user);
     if(res.data){
+      setEmail(user.email);
       Navigate("/");
     }
     else{
