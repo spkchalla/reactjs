@@ -21,7 +21,7 @@ export default function Register() {
     };
     const res = await axios.post(url, userObj);
     // setUsers([...users, user]);
-    setUsers([...users, userObj]);
+    // setUsers([...users, userObj]);
     Navigate("/login");
   };
   return (
