@@ -7,16 +7,24 @@ export default function Login() {
   const [error, setError] = useState();
   const Navigate = useNavigate();
   const { users,setEmail } = useContext(AppContext);
-  const handleSubmit = () => {
-    const found = users.find(
-      (elem) => elem.email === user.email && elem.pass === user.pass
-    );
-    if (!found) {
-      setError("Access Denied");
-    } else {
-      setEmail(user.email)
+  const handleSubmit = async () => {
+    const url = "http://localhost:8080/login";
+    const res = await axios.post(url, user);
+    if(res.data){
       Navigate("/");
     }
+    else{
+      setError("Access Denied");
+    }
+    // const found = users.find(
+    //   (elem) => elem.email === user.email && elem.pass === user.pass
+    // );
+    // if (!found) {
+    //   setError("Access Denied");
+    // } else {
+    //   setEmail(user.email)
+    //   Navigate("/");
+    // }
   };
   return (
     <div>
