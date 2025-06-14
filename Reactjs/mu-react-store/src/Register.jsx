@@ -11,9 +11,9 @@ export default function Register() {
   const nameRef = useRef();
   const emailRef = useRef();
   const passRef = useRef();
-  const handleSubmit = async() => {
-    
-      const url = "http://localhost:8080/users";
+  const API = import.meta.env.VITE_API_URL;
+  const handleSubmit = async () => {
+    const url = `${API}/register`;
     const userObj = {
       name: nameRef.current.value,
       email: emailRef.current.value,

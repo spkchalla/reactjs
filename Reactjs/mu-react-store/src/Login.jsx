@@ -8,8 +8,10 @@ export default function Login() {
   const [error, setError] = useState();
   const Navigate = useNavigate();
   const { users,setEmail } = useContext(AppContext);
+  const API = import.meta.env.VITE_API_URL;
+
   const handleSubmit = async () => {
-    const url = "http://localhost:8080/login";
+    const url = `${API}/login`;
     const res = await axios.post(url, user);
     if(res.data){
       setEmail(user.email);
